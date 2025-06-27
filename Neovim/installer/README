@@ -1,0 +1,15 @@
+===========================================
+Установка в качестве глобального редактора:
+===========================================
+sudo update-alternatives --install /usr/bin/editor editor /usr/local/bin/nvim 100
+sudo update-alternatives --install /usr/bin/vi vi /usr/local/bin/nvim 100
+
+sudo visudo и в конце добавить:
+Defaults env_keep += "XMODIFIERS GTK_IM_MODULE QT_IM_MODULE INPUT_METHOD WAYLAND_DISPLAY XDG_RUNTIME_DIR DBUS_SESSION_BUS_ADDRESS SSH_AUTH_SOCK EDITOR VISUAL MANPAGER LANG"
+
+Добавить в файл /etc/environment:
+EDITOR=nvim
+VISUAL=nvim
+MANPAGER="nvim +Man!"
+
+git config --global core.editor nvim

@@ -1,0 +1,82 @@
+" Конфиг для IdeaVim PyCharm. Положить в ~/.ideavimrc
+" Установить расширения IdeaVim (включает IdeaVim-EasyMotion и IdeaVimExtension) и AceJump
+
+" ===========================================
+" Для работы автопереключения раскладки в IdeaVim вместо ibus установить систему ввода fcitx5:
+" ===========================================
+" sudo apt update
+" sudo apt install fcitx5
+" sudo apt purge ibus
+" sudo apt autoremove --purge
+" sudo apt full-upgrade
+" sudo apt autoclean
+
+" Затем в настройках системы:
+" System -> Region $ Language -> Manage Installed Languages -> Keyboard input method -> Fcitx 5
+
+" В файле /etc/environment добавить в конце:
+" INPUT_METHOD=fcitx
+" XMODIFIERS="@im=fcitx"
+" GTK_IM_MODULE=fcitx
+" QT_IM_MODULE=fcitx
+
+" Добавить Fcitx 5 в автозагрузку:
+" sudo cp /usr/share/applications/org.fcitx.Fcitx5.desktop /etc/xdg/autostart/
+
+" Перезагрузить систему
+" Откройте Fcitx 5 Configuration и добавьте нужный метод ввода
+
+" =========================================
+" 📄 Общие настройки
+" =========================================
+set clipboard=unnamedplus
+set clipboard^=ideaput
+set timeoutlen=250
+
+" =========================================
+" 🔍 Настройки поиска
+" =========================================
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+nnoremap <Esc> :nohlsearch<CR>
+
+" =========================================
+" 🏁 Лидер-клавиша
+" =========================================
+let mapleader = " "
+
+" =========================================
+" 🧩 Настройки расширений
+" =========================================
+set easymotion
+noremap <Leader>s :action AceAction<CR>
+
+set keep-english-in-normal
+set keep-english-in-normal-and-restore-in-insert
+let context_aware=1
+
+" =========================================
+" 🔄 Удаление без копирования в буфер обмена (Normal + Visual режимы)
+" =========================================
+nnoremap c "_c
+nnoremap C "_C
+nnoremap d "_d
+nnoremap D "_D
+nnoremap s "_s
+nnoremap S "_S
+
+vnoremap c "_c
+vnoremap C "_C
+vnoremap d "_d
+vnoremap D "_D
+vnoremap s "_s
+vnoremap S "_S
+
+" =========================================
+" ⌨️ Быстрый выход из режима вставки (Insert mode)
+" =========================================
+inoremap jj <Esc>
+" рус
+inoremap оо <Esc>

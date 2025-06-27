@@ -1,0 +1,169 @@
+{
+  // =====================================
+  // 🧩 Расширения и Codeium
+  // =====================================
+  "codeium.enableConfig": {
+    "*": true,
+    "markdown": true
+  },
+  "gitignore.cacheExpirationInterval": 3600,
+  "database-client.autoSync": true,
+  // =====================================
+  // 🖼️ Интерфейс
+  // =====================================
+  "workbench.colorTheme": "Mariana",
+  "workbench.iconTheme": "material-icon-theme",
+  "files.autoSave": "afterDelay",
+  // =====================================
+  // 🧠 Поведение редактора
+  // =====================================
+  "editor.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "editor.fontSize": 16,
+  "editor.lineHeight": 1.45,
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [99],
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  // =====================================
+  // ⚙️ Форматтеры по языкам
+  // =====================================
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.prettierPath": "/usr/lib/node_modules/prettier/",
+  "prettier.resolveGlobalModules": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+  },
+  // =====================================
+  // 🧪 Jupyter Notebook
+  // =====================================
+  "notebook.formatOnSave.enabled": true,
+  "notebook.formatOnCellExecution": true,
+  "notebook.lineNumbers": "on",
+  "notebook.output.lineHeight": 1.45,
+  // =====================================
+  // 🐍 Python
+  // =====================================
+  "python.defaultInterpreterPath": "/home/aleksey/anaconda3",
+  "python.terminal.executeInFileDir": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.showOnlyDirectDependenciesInAutoImport": true,
+  // =====================================
+  // ▶️ Code Runner
+  // =====================================
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.runInTerminal": true,
+  "code-runner.fileDirectoryAsCwd": true,
+  // =====================================
+  // 🧠 Терминал и отладка
+  // =====================================
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.lineHeight": 1.45,
+  "debug.console.fontSize": 16,
+  "debug.console.lineHeight": 1.45,
+  "scm.inputFontSize": 15,
+  // =====================================
+  // 📚 Markdown и Chat
+  // =====================================
+  "markdown.preview.fontSize": 16,
+  "markdown.preview.lineHeight": 1.45,
+  "chat.editor.fontSize": 16,
+  "chat.editor.lineHeight": 1.45,
+  // =====================================
+  // 🧙 Vim — базовые настройки
+  // =====================================
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "vim.leader": "<space>",
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.autoSwitchInputMethod.defaultIM": "keyboard-us",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/bin/fcitx5-remote",
+  "vim.autoSwitchInputMethod.switchIMCmd": "/usr/bin/fcitx5-remote -s {im}",
+  "vim.useSystemClipboard": true,
+  "vim.smartRelativeLine": true,
+  "vim.easymotion": true,
+  "vim.timeout": 250,
+  "vim.ignorecase": true,
+  "vim.smartcase": true,
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  // Вставочный режим — без рекурсии
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["о", "о"],
+      "after": ["<Esc>"]
+    }
+  ],
+  // Обычный режим — без рекурсии
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Esc>"],
+      "commands": [":nohlsearch"]
+    },
+    {
+      "before": ["C"],
+      "after": ["\"", "_", "C"]
+    },
+    {
+      "before": ["D"],
+      "after": ["\"", "_", "D"]
+    },
+    {
+      "before": ["S"],
+      "after": ["\"", "_", "S"]
+    },
+    {
+      "before": ["c"],
+      "after": ["\"", "_", "c"]
+    },
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["s"],
+      "after": ["\"", "_", "s"]
+    }
+  ],
+  // Визуальный режим — без рекурсии
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["C"],
+      "after": ["\"", "_", "C"]
+    },
+    {
+      "before": ["D"],
+      "after": ["\"", "_", "D"]
+    },
+    {
+      "before": ["S"],
+      "after": ["\"", "_", "S"]
+    },
+    {
+      "before": ["c"],
+      "after": ["\"", "_", "c"]
+    },
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["s"],
+      "after": ["\"", "_", "s"]
+    }
+  ]
+}

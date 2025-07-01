@@ -1,0 +1,38 @@
+Установить расширения VIM и Code Ace Jumper
+Добавить в настройки VSCode из settngs.json раздел: Vim — базовые настройки
+   в сочетания клавишь из keybindings.json разделы: Отключение Vim-мэппингов
+
+===========================================
+Для работы автопереключения раскладки в VIM вместо ibus установить систему ввода fcitx5:
+===========================================
+sudo apt update
+sudo apt install fcitx5
+sudo apt purge ibus
+sudo apt autoremove --purge
+sudo apt full-upgrade
+sudo apt autoclean
+
+Затем в настройках системы:
+System -> Region $ Language -> Manage Installed Languages -> Keyboard input method -> Fcitx 5
+
+В файле /etc/environment добавить в конце:
+INPUT_METHOD=fcitx
+XMODIFIERS="@im=fcitx"
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+
+Добавить Fcitx 5 в автозагрузку:
+sudo cp /usr/share/applications/org.fcitx.Fcitx5.desktop /etc/xdg/autostart/
+
+Перезагрузить систему
+Откройте Fcitx 5 Configuration и добавьте нужный метод ввода
+
+===========================================
+При желании использовать остальные растройки установи общесистемный форматтер и расширения:
+===========================================
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
+sudo apt install -y nodejs
+sudo npm install --global prettier
+sudo npm install --global @fsouza/prettierd
+
+cat extensions-list.txt | xargs -L 1 code --install-extension

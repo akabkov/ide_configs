@@ -1,0 +1,135 @@
+" Конфиг для IdeaVim PyCharm. Положить в ~/.ideavimrc
+" Установить расширения IdeaVim (включает IdeaVim-EasyMotion и IdeaVimExtension) и AceJump
+
+" ===========================================
+" Для работы автопереключения раскладки в IdeaVim вместо ibus установить систему ввода fcitx5:
+" ===========================================
+" sudo apt update
+" sudo apt install fcitx5
+" sudo apt purge ibus
+" sudo apt autoremove --purge
+" sudo apt full-upgrade
+" sudo apt autoclean
+
+" Затем в настройках системы:
+" System -> Region $ Language -> Manage Installed Languages -> Keyboard input method -> Fcitx 5
+
+" В файле /etc/environment добавить в конце:
+" INPUT_METHOD=fcitx
+" XMODIFIERS="@im=fcitx"
+" GTK_IM_MODULE=fcitx
+" QT_IM_MODULE=fcitx
+
+" Добавить Fcitx 5 в автозагрузку:
+" sudo cp /usr/share/applications/org.fcitx.Fcitx5.desktop /etc/xdg/autostart/
+
+" Перезагрузить систему
+" Откройте Fcitx 5 Configuration и добавьте нужный метод ввода
+
+" =========================================
+" 🏁 Лидер-клавиша
+" =========================================
+let mapleader = " "
+
+" =========================================
+" 🛠️ Общие настройки
+" =========================================
+set clipboard=unnamedplus
+set clipboard^=ideaput
+set timeoutlen=250
+
+" =========================================
+" 🔍 Настройки поиска
+" =========================================
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+
+nnoremap <Leader>h :nohlsearch<CR>
+
+" =========================================
+" 🧩 Настройки расширений
+" =========================================
+set easymotion
+noremap <Leader>s :action AceAction<CR>
+
+set keep-english-in-normal
+
+" =========================================
+" 🗑️ Удаление без копирования в буфер обмена
+" =========================================
+nnoremap c "_c
+nnoremap C "_C
+nnoremap d "_d
+nnoremap D "_D
+nnoremap s "_s
+nnoremap S "_S
+nnoremap x "_x
+nnoremap X "_X
+
+vnoremap c "_c
+vnoremap C "_C
+vnoremap d "_d
+vnoremap D "_D
+vnoremap s "_s
+vnoremap S "_S
+
+" =========================================
+" 🔘 Быстрый выход из режима вставки (Insert mode)
+" =========================================
+inoremap jj <Esc>
+" русская раскладка
+inoremap оо <Esc>
+
+" =========================================
+" ⛔ Отклонить автодополнение кода и Esc в Jupyter Notebook
+" =========================================
+inoremap <C-[> <Esc>a
+nnoremap <C-[> <Esc>
+
+" =========================================
+" 🎛️ Назначение обработчиков клавиш (использовать комбинацию IDE или Vim)
+" =========================================
+sethandler <S-CR> a:ide
+sethandler <C-Pageup> a:ide
+sethandler <C-Pagedown> a:ide
+sethandler <S-Left> a:ide
+sethandler <C-Left> a:ide
+sethandler <S-Up> a:ide
+sethandler <C-Up> a:ide
+sethandler <S-Right> a:ide
+sethandler <C-Right> a:ide
+sethandler <S-Down> a:ide
+sethandler <C-Down> a:ide
+sethandler <C-2> a:ide
+sethandler <C-S-2> a:ide
+sethandler <C-6> a:ide
+sethandler <C-S-6> a:ide
+sethandler <C-;> a:ide
+sethandler <C-S-;> a:ide
+sethandler <C-A> a:ide
+sethandler <C-B> a:ide
+sethandler <C-C> a:ide
+sethandler <C-D> a:ide
+sethandler <C-E> a:ide
+sethandler <C-F> a:vim
+sethandler <C-G> a:ide
+sethandler <C-H> a:ide
+sethandler <C-I> a:vim
+sethandler <C-J> a:ide
+sethandler <C-K> a:ide
+sethandler <C-L> a:ide
+sethandler <C-M> a:ide
+sethandler <C-N> a:ide
+sethandler <C-O> a:vim
+sethandler <C-P> a:ide
+sethandler <C-Q> a:ide
+sethandler <C-R> a:vim
+sethandler <C-S> a:ide
+sethandler <C-U> a:vim
+sethandler <C-V> a:ide
+sethandler <C-W> a:ide
+sethandler <C-X> a:ide
+sethandler <C-Y> a:ide
+sethandler <C-\> a:ide

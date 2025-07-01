@@ -1,0 +1,21 @@
+ОСТОРОЖНО! Устоновка через install_sublime_config.sh заменяет уже существующие настройки.
+Чтобы добавить к существующим, вручную установите интересующие настройки через графический интерфейс Sublime Text.
+
+===========================================
+Для работы некоторых плагинов должен быть установлен общесистемный форматтер:
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
+sudo apt install -y nodejs
+sudo npm install --global prettier
+sudo npm install --global @fsouza/prettierd
+===========================================
+
+ВЫЯВЛЕН БАГ! в работе расширения Codeium - не завершает процесс language_server_linux_x64.download при закрытии Sublime Text.
+Из-за чего постепенно накапливаются его клоны при новых запусках Sublime Text.
+Проблена на стороне разработчиков (или Codeium или Sublime Text).
+
+Если наблюдаете подобное, положить kill_codeium_many_instances.sh в ~/.codeium/sublime/, добавить права на исполнение и выполнить:
+crontab -e
+*/10 * * * * ~/.codeium/sublime/kill_codeium_many_instances.sh
+crontab -l
+
+Создаст задачу автоматического завершение дублированных процессов language_server_linux_x64.download каждые N минут.

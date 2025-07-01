@@ -1,0 +1,266 @@
+{
+  // =====================================
+  // 🧩 Расширения и Codeium
+  // =====================================
+  "codeium.enableConfig": {
+    "*": true,
+    "markdown": true,
+    "plaintext": true
+  },
+  "database-client.autoSync": true,
+  "gitignore.cacheExpirationInterval": 3600,
+  "go.toolsManagement.autoUpdate": true,
+
+  // =====================================
+  // 🛠️ Поведение и внешний вид редактора
+  // =====================================
+  "files.autoSave": "afterDelay",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [99],
+  "editor.wordWrap": "on",
+  "multiCommand.commands": [
+    {
+      "command": "extension.commentAndNextLine",
+      "sequence": ["editor.action.commentLine", "cursorDown"]
+    }
+  ],
+  "editor.wordWrapColumn": 99,
+  "workbench.colorTheme": "Mariana",
+  "workbench.iconTheme": "material-icon-theme",
+
+  // =====================================
+  // 🅰️ Настройки шрифтов
+  // =====================================
+  "chat.editor.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "chat.editor.fontSize": 16,
+  "chat.editor.lineHeight": 1.5,
+  "debug.console.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "debug.console.fontSize": 16,
+  "debug.console.lineHeight": 1.5,
+  "editor.codeLensFontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "editor.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "editor.fontSize": 16,
+  "editor.inlayHints.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "editor.inlineSuggest.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "editor.lineHeight": 1.5,
+  "markdown.preview.fontSize": 16,
+  "markdown.preview.lineHeight": 1.5,
+  "notebook.markdown.lineHeight": 1.5,
+  "notebook.markup.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "notebook.output.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "notebook.output.fontSize": 14,
+  "notebook.output.lineHeight": 1.5,
+  "scm.inputFontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "scm.inputFontSize": 14,
+  "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.lineHeight": 1.05,
+
+  // =====================================
+  // ⚙️ Форматтеры по языкам
+  // =====================================
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.prettierPath": "/usr/lib/node_modules/prettier/",
+  "prettier.resolveGlobalModules": true,
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+
+  // =====================================
+  // 🐍 Python
+  // =====================================
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.showOnlyDirectDependenciesInAutoImport": true,
+  "python.defaultInterpreterPath": "/home/aleksey/anaconda3", //ЗАМЕНИТЬ НА СВОЙ ПУТЬ
+  "python.terminal.executeInFileDir": true,
+
+  // =====================================
+  // ▶️ Code Runner
+  // =====================================
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.fileDirectoryAsCwd": true,
+  "code-runner.runInTerminal": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.saveFileBeforeRun": true,
+
+  // =====================================
+  // 📊 Jupyter Notebook
+  // =====================================
+  "notebook.formatOnCellExecution": true,
+  "notebook.formatOnSave.enabled": true,
+  "notebook.lineNumbers": "on",
+
+  // =====================================
+  // 📝 Выделение SQL внутри 3-х кавычек для быстрого форматирования по двойному нажатию <leader>+f
+  // =====================================
+  "selectby.regexes": {
+    "insideTripleQuotes": {
+      "forward": "('''|\"\"\")",
+      "backward": "('''|\"\"\")",
+      "forwardInclude": false,
+      "backwardInclude": false
+    }
+  },
+
+  // =====================================
+  // 🧙 Vim — базовые настройки и мапинги клавиш
+  // =====================================
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "vim.autoSwitchInputMethod.defaultIM": "keyboard-us",
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/bin/fcitx5-remote",
+  "vim.autoSwitchInputMethod.switchIMCmd": "/usr/bin/fcitx5-remote -s {im}",
+  "vim.easymotion": true,
+  "vim.hlsearch": true,
+  "vim.ignorecase": true,
+  "vim.incsearch": true,
+  "vim.leader": "<space>",
+  "vim.smartRelativeLine": true,
+  "vim.smartcase": true,
+  "vim.timeout": 250,
+  "vim.useSystemClipboard": true,
+
+  // Быстрый выход из режима вставки, маркировка SQL, Esc в Insert mode
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["s", "s"],
+      "after": ["-", "-", "s", "q", "l"]
+    },
+    {
+      "before": ["<C-[>"],
+      "after": ["<Esc>", "a"]
+    },
+    // русская раскладка
+    {
+      "before": ["о", "о"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["ы", "ы"],
+      "after": ["-", "-", "s", "q", "l"]
+    },
+    {
+      "before": ["<C-х>"],
+      "after": ["<Esc>", "a"]
+    }
+  ],
+
+  // Комбинации с лидер-клавишей
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["prettier-sql-vscode.format-selection"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "f"],
+      "commands": [
+        {
+          "command": "selectby.regex",
+          "args": ["insideTripleQuotes"]
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "commands": [":nohlsearch"]
+    },
+    {
+      "before": ["<leader>", "s"],
+      "commands": ["extension.aceJump.multiChar"]
+    },
+
+    // Esc в Jupyter Notebook
+    {
+      "before": ["<C-[>"],
+      "commands": ["notebook.cell.quitEdit"]
+    }
+  ],
+
+  // Удаление без копирования в буфер обмена
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["c"],
+      "after": ["\"", "_", "c"]
+    },
+    {
+      "before": ["C"],
+      "after": ["\"", "_", "C"]
+    },
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["D"],
+      "after": ["\"", "_", "D"]
+    },
+    {
+      "before": ["s"],
+      "after": ["\"", "_", "s"]
+    },
+    {
+      "before": ["S"],
+      "after": ["\"", "_", "S"]
+    },
+    {
+      "before": ["x"],
+      "after": ["\"", "_", "x"]
+    },
+    {
+      "before": ["X"],
+      "after": ["\"", "_", "X"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["c"],
+      "after": ["\"", "_", "c"]
+    },
+    {
+      "before": ["C"],
+      "after": ["\"", "_", "C"]
+    },
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["D"],
+      "after": ["\"", "_", "D"]
+    },
+    {
+      "before": ["s"],
+      "after": ["\"", "_", "s"]
+    },
+    {
+      "before": ["S"],
+      "after": ["\"", "_", "S"]
+    }
+  ]
+}

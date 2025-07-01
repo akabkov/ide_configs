@@ -1,0 +1,45 @@
+{
+	// Внешний вид
+	"color_scheme": "Mariana.sublime-color-scheme",
+	"dark_theme": "Default Dark.sublime-theme",
+	"light_theme": "Default.sublime-theme",
+	"theme": "auto",
+	"font_face": "JetBrainsMonoNL Nerd Font Mono",
+	"font_size": 12,
+	"line_padding_top": 1,
+	"line_padding_bottom": 1,
+	"rulers": [99],
+	"draw_white_space": "all",
+	"highlight_line": true,
+	"draw_minimap": true,
+	"draw_minimap_border": true,
+	"always_show_minimap_viewport": false,
+
+	// Редактирование и форматирование
+	"translate_tabs_to_spaces": true,
+	"tab_size": 4,
+	"auto_indent": true,
+	"smart_indent": true,
+	"trim_trailing_white_space_on_save": "all",
+	"word_wrap": true,
+
+	// Поведение при работе с файлами
+	"save_on_focus_lost": true,
+	"hot_exit": false,
+	"remember_open_files": false,
+	"index_files": true,
+	"index_workers": 4,
+
+	// Навигация и подсветка
+	"match_brackets": true,
+	"match_brackets_angle": true,
+	"match_brackets_braces": true,
+	"match_brackets_content": true,
+	"match_brackets_square": true,
+	"bracket_highlighter_color_scheme": true,
+
+	// Игнорируемые пакеты
+	"ignored_packages": [
+		"Vintage",
+	],
+}

@@ -1,0 +1,6 @@
+[
+    { "keys": ["ctrl+tab"], "command": "toggle_side_bar" },
+    { "keys": ["ctrl+`"], "command": "terminus_open", "args": { "title": "bash", "shell_cmd": "bash", "cwd": "${file_path:${folder}}", "panel_name": "bash", "auto_close": true, "focus": true, "post_window_hooks": [["carry_file_to_pane", { "direction": "down" }]], "view_settings": { "line_padding_top": 0, "line_padding_bottom": 0 } } },
+    { "keys": ["shift+delete"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+    { "keys": ["ctrl+/"], "command": "run_macro_file", "args": { "file": "Packages/User/comment_and_next_line.sublime-macro" } }
+]

@@ -14,6 +14,5 @@ return {
     vim.keymap.set({ 'n', 'v', 'x', 's', 'o' }, '<leader>S', function()
       leap.leap({ target_windows = require('leap.util').get_enterable_windows() })
     end, { desc = 'Leap: во всех окнах' })
-
   end,
 }

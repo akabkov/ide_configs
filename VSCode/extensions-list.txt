@@ -5,6 +5,7 @@ cweijan.vscode-database-client2
 esbenp.prettier-vscode
 formulahendry.code-runner
 golang.go
+hashicorp.terraform
 inferrinizzard.prettier-sql-vscode
 kevinrose.vsc-python-indent
 lucax88x.codeacejumper

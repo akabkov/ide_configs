@@ -15,10 +15,9 @@
     "command": "extension.commentAndNextLine",
     "when": "editorTextFocus && !editorReadonly"
   },
-
-  // =====================================
+  // ====================================
   // 📂 Интерфейс: боковая панель и вспомогательная панель
-  // =====================================
+  // ====================================
   {
     "key": "ctrl+tab",
     "command": "workbench.action.toggleSidebarVisibility"
@@ -31,19 +30,17 @@
     "key": "ctrl+alt+b",
     "command": "-workbench.action.toggleAuxiliaryBar"
   },
-
-  // =====================================
+  // ====================================
   // 🧠 Отклонить автодополнение ИИ
-  // =====================================
+  // ====================================
   {
     "key": "ctrl+[",
     "command": "editor.action.inlineSuggest.hide",
     "when": "inlineSuggestionVisible"
   },
-
-  // =====================================
+  // ====================================
   // ✅ Отключение Vim-мэппингов
-  // =====================================
+  // ====================================
   {
     "key": "ctrl+a",
     "command": "-extension.vim_ctrl+a",
@@ -79,10 +76,9 @@
     "command": "notebook.find",
     "when": "notebookEditorFocused && !editorFocus && activeEditor == 'workbench.editor.interactive' || notebookEditorFocused && !editorFocus && activeEditor == 'workbench.editor.notebook' && vim.active && vim.mode == 'Insert'"
   },
-
-  // =====================================
+  // ====================================
   // 🖥 Терминал Ctrl+C и Ctrl+V
-  // =====================================
+  // ====================================
   {
     "key": "ctrl+shift+c",
     "command": "-workbench.action.terminal.copySelection",

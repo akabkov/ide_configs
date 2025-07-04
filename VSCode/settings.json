@@ -10,7 +10,9 @@
   "database-client.autoSync": true,
   "gitignore.cacheExpirationInterval": 3600,
   "go.toolsManagement.autoUpdate": true,
-
+  "vs-kubernetes": {
+    "vscode-kubernetes.helm-path-linux": "/home/aleksey/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm"
+  },
   // =====================================
   // 🛠️ Поведение и внешний вид редактора
   // =====================================
@@ -33,7 +35,6 @@
   "editor.wordWrapColumn": 99,
   "workbench.colorTheme": "Mariana",
   "workbench.iconTheme": "material-icon-theme",
-
   // =====================================
   // 🅰️ Настройки шрифтов
   // =====================================
@@ -61,7 +62,6 @@
   "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.lineHeight": 1.05,
-
   // =====================================
   // ⚙️ Форматтеры по языкам
   // =====================================
@@ -83,15 +83,13 @@
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar"
   },
-
   // =====================================
   // 🐍 Python
   // =====================================
   "python.analysis.autoImportCompletions": true,
   "python.analysis.showOnlyDirectDependenciesInAutoImport": true,
-  "python.defaultInterpreterPath": "/home/aleksey/anaconda3", //ЗАМЕНИТЬ НА СВОЙ ПУТЬ
+  "python.defaultInterpreterPath": "/home/aleksey/anaconda3",
   "python.terminal.executeInFileDir": true,
-
   // =====================================
   // ▶️ Code Runner
   // =====================================
@@ -100,14 +98,12 @@
   "code-runner.runInTerminal": true,
   "code-runner.saveAllFilesBeforeRun": true,
   "code-runner.saveFileBeforeRun": true,
-
   // =====================================
   // 📊 Jupyter Notebook
   // =====================================
   "notebook.formatOnCellExecution": true,
   "notebook.formatOnSave.enabled": true,
   "notebook.lineNumbers": "on",
-
   // =====================================
   // 📝 Выделение SQL внутри 3-х кавычек для быстрого форматирования по двойному нажатию <leader>+f
   // =====================================
@@ -119,7 +115,6 @@
       "backwardInclude": false
     }
   },
-
   // =====================================
   // 🧙 Vim — базовые настройки и мапинги клавиш
   // =====================================
@@ -139,7 +134,6 @@
   "vim.smartcase": true,
   "vim.timeout": 250,
   "vim.useSystemClipboard": true,
-
   // Быстрый выход из режима вставки, маркировка SQL, Esc в Insert mode
   "vim.insertModeKeyBindingsNonRecursive": [
     {
@@ -168,7 +162,6 @@
       "after": ["<Esc>", "a"]
     }
   ],
-
   // Комбинации с лидер-клавишей
   "vim.visualModeKeyBindings": [
     {
@@ -194,14 +187,12 @@
       "before": ["<leader>", "s"],
       "commands": ["extension.aceJump.multiChar"]
     },
-
     // Esc в Jupyter Notebook
     {
       "before": ["<C-[>"],
       "commands": ["notebook.cell.quitEdit"]
     }
   ],
-
   // Удаление без копирования в буфер обмена
   "vim.normalModeKeyBindingsNonRecursive": [
     {

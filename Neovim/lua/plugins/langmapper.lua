@@ -32,7 +32,6 @@ return {
   priority = 1000,
   config = function()
     local function escape(str)
-
       local escape_chars = [[;,."|\]]
       return vim.fn.escape(str, escape_chars)
     end

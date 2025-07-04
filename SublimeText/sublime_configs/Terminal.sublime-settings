@@ -1,4 +1,3 @@
-// Terminal Settings - User
 {
-    "terminal": "tilix"
+  "terminal": "tilix"
 }

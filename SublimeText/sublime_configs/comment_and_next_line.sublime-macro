@@ -1,10 +1,15 @@
 [
   {
     "command": "toggle_comment",
-    "args": { "block": false }
+    "args": {
+      "block": false
+    }
   },
   {
     "command": "move",
-    "args": { "by": "lines", "forward": true }
+    "args": {
+      "by": "lines",
+      "forward": true
+    }
   }
 ]

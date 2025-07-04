@@ -1,0 +1,53 @@
+{
+  "target": "terminus_exec",
+  "cancel": "terminus_cancel_build",
+  "auto_close": false,
+  "cwd": "${file_path:${folder}}",
+  "env": {
+    "TERM": "xterm-256color"
+  },
+  "focus": false,
+  "view_settings": {
+    "line_padding_top": 0,
+    "line_padding_bottom": 0
+  },
+  // Раздел для добавления языков
+  "variants": [
+    {
+      "name": "Go Build & Run",
+      "selector": "source.go",
+      "shell_cmd": "go run \"${file}\"",
+      "title": "Go Build & Run"
+    },
+    {
+      "name": "Lua Run",
+      "selector": "source.lua",
+      "shell_cmd": "lua \"${file}\"",
+      "title": "Lua Run"
+    },
+    {
+      "name": "Python (Anaconda base)",
+      "selector": "source.python",
+      "shell_cmd": "[[ -f ~/anaconda3/etc/profile.d/conda.sh ]] && source ~/anaconda3/etc/profile.d/conda.sh && conda activate base && python \"${file}\"",
+      "title": "Python (Anaconda base)"
+    },
+    {
+      "name": "Run Shell Script",
+      "selector": "source.shell",
+      "shell_cmd": "bash \"${file}\"",
+      "title": "Run Shell Script"
+    },
+    {
+      "name": "Terraform Plan",
+      "selector": "source.terraform",
+      "shell_cmd": "terraform plan",
+      "title": "Terraform Plan"
+    },
+    {
+      "name": "Terraform Validate",
+      "selector": "source.terraform",
+      "shell_cmd": "terraform validate",
+      "title": "Terraform Validate"
+    }
+  ]
+}

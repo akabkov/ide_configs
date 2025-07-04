@@ -8,20 +8,20 @@ local keymap = vim.keymap.set
 local modes = { 'n', 'v', 'x', 's', 'o' }
 
 -- Удаление без копирования в буфер обмена
-keymap('n', 'c',  '"_c')
-keymap('n', 'C',  '"_C')
-keymap('n', 'd',  '"_d')
+keymap('n', 'c', '"_c')
+keymap('n', 'C', '"_C')
+keymap('n', 'd', '"_d')
 keymap('n', 'dd', '"_dd')
-keymap('n', 'D',  '"_D')
+keymap('n', 'D', '"_D')
 keymap('n', 's', '"_s')
 keymap('n', 'S', '"_S')
 keymap('n', 'x', '"_x')
 keymap('n', 'X', '"_X')
 
-keymap('v', 'c',  '"_c')
-keymap('v', 'C',  '"_C')
-keymap('v', 'd',  '"_d')
-keymap('v', 'D',  '"_D')
+keymap('v', 'c', '"_c')
+keymap('v', 'C', '"_C')
+keymap('v', 'd', '"_d')
+keymap('v', 'D', '"_D')
 keymap('v', 's', '"_s')
 keymap('v', 'S', '"_S')
 

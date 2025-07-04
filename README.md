@@ -49,13 +49,13 @@
 │   ├── kill_codeium_many_instances.sh        # Утилита для принудительного завершения зависших процессов Codeium
 │   ├── README
 │   └── sublime_configs                       # Файлы настроек Sublime Text
-│       ├── Anaconda.sublime-build
 │       ├── comment_and_next_line.sublime-macro
 │       ├── Default (Linux).sublime-keymap
 │       ├── Package Control.sublime-settings
 │       ├── Preferences.sublime-settings
 │       ├── prettierd_format.sublime-settings
-│       └── Terminal.sublime-settings
+│       ├── Terminal.sublime-settings
+│       └── Terminus.sublime-build
 │
 └── VSCode                                    # Основные настройки: keybindings и settings
     ├── extensions-list.txt
@@ -172,13 +172,13 @@ cd ide_configs/SublimeText
 
 Установятся:
 
-- Builder для интерпретатора Anaconda: `Anaconda.sublime-build` (подразумевается что Anaconda установлена в системе)
 - Макрос для автоперехода на следующую строку при комментировании: `comment_and_next_line.sublime-macro`
 - Горячие клавиши: `Default (Linux).sublime-keymap`
 - Настройки пакетов: `Package Control.sublime-settings`
 - Общие настройки: `Preferences.sublime-settings`
 - Настройка общесистемного форматтера: `prettierd_format.sublime-settings` (подразумевается что prettierd установлен в системе)
-- Настройка терминала по умолчанию: `Terminal.sublime-settings` (изменить на ваш системный терминал)
+- Настройка терминала по умолчанию: `Terminal.sublime-settings` (измените на ваш терминал)
+- Универсальный Builder: `Terminus.sublime-build` (при желании добавьте секцию для нужного языка)
 
 > Доп. информация — в `SublimeText/REDME`.
 

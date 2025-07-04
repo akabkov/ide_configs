@@ -10,6 +10,9 @@
   "database-client.autoSync": true,
   "gitignore.cacheExpirationInterval": 3600,
   "go.toolsManagement.autoUpdate": true,
+  "vs-kubernetes": {
+    "vscode-kubernetes.helm-path-linux": "/home/aleksey/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm"
+  },
 
   // =====================================
   // 🛠️ Поведение и внешний вид редактора
@@ -89,7 +92,7 @@
   // =====================================
   "python.analysis.autoImportCompletions": true,
   "python.analysis.showOnlyDirectDependenciesInAutoImport": true,
-  "python.defaultInterpreterPath": "/home/aleksey/anaconda3", //ЗАМЕНИТЬ НА СВОЙ ПУТЬ
+  "python.defaultInterpreterPath": "/home/aleksey/anaconda3",
   "python.terminal.executeInFileDir": true,
 
   // =====================================

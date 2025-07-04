@@ -2,7 +2,7 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"MarkdownEditing",
+		"SublimeLinter",
 	],
 	"installed_packages":
 	[
@@ -22,6 +22,7 @@
 		"LSP-json",
 		"LSP-lua",
 		"LSP-pyright",
+		"LSP-terraform",
 		"LSP-TexLab",
 		"LSP-typescript",
 		"LSP-yaml",
@@ -38,6 +39,7 @@
 		"SublimeLinter-shellcheck",
 		"Terminal",
 		"Terminus",
+		"Terraform",
 		"TOML",
 		"Vue",
 	],

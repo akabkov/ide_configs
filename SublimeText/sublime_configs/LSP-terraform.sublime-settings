@@ -1,6 +1,0 @@
-{
-  "command": [
-    "/usr/local/bin/terraform-ls",
-    "serve"
-  ]
-}

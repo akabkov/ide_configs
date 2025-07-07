@@ -3,6 +3,56 @@
   "lsp_format_on_paste": true,
   "lsp_code_actions_on_save": {
     "source.fixAll": true,
-    "source.organizeImports": true
+    "source.organizeImports": true,
+    "source.formatAll.terraform": true
+  },
+  // Кастомный LSP-terraform клиент
+  "clients": {
+    "terraform-ls": {
+      "enabled": true,
+      "command": [
+        "/usr/local/bin/terraform-ls",
+        "serve"
+      ],
+      "selector": "source.terraform | source.terraform-vars | source.hcl",
+      "settings": {
+        "terraform": {
+          "path": "/usr/local/bin/terraform",
+          "logFilePath": "/var/log/terraform-sublime.log"
+        },
+        "experimentalFeatures": {
+          "validateOnSave": true,
+          "prefillRequiredFields": true
+        },
+        "validation": {
+          "enableEnhancedValidation": true
+        },
+        "ignoreSingleFileWarning": true,
+        "indexing": {
+          "ignoreDirectoryNames": [
+            ".git",
+            ".idea",
+            ".vscode",
+            "terraform.tfstate.d",
+            ".terragrunt-cache"
+          ],
+          "ignorePaths": [
+            "vendor",
+            ".terraform"
+          ]
+        }
+      },
+      "file_watcher": {
+        "patterns": [
+          "**/*.tf",
+          "**/*.tfvars"
+        ],
+        "events": [
+          "create",
+          "change",
+          "delete"
+        ]
+      }
+    }
   }
 }

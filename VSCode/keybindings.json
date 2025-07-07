@@ -10,6 +10,7 @@
     "key": "ctrl+n",
     "command": "welcome.showNewFileEntries"
   },
+  // Комментирование с переходом на следующую строку
   {
     "key": "ctrl+/",
     "command": "extension.commentAndNextLine",
@@ -37,6 +38,14 @@
     "key": "ctrl+[",
     "command": "editor.action.inlineSuggest.hide",
     "when": "inlineSuggestionVisible"
+  },
+  {
+    "key": "alt+w",
+    "command": "codeium.cancelSnooze"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "codeium.snoozeAutocomplete"
   },
   // ====================================
   // ✅ Отключение Vim-мэппингов
@@ -75,6 +84,24 @@
     "key": "ctrl+f",
     "command": "notebook.find",
     "when": "notebookEditorFocused && !editorFocus && activeEditor == 'workbench.editor.interactive' || notebookEditorFocused && !editorFocus && activeEditor == 'workbench.editor.notebook' && vim.active && vim.mode == 'Insert'"
+  },
+  // ====================================
+  // 🧹 Очистить вывод Jupyter Notebook
+  // ====================================
+  {
+    "key": "alt+delete",
+    "command": "-notebook.cell.clearOutputs",
+    "when": "notebookCellEditable && notebookCellHasOutputs && notebookEditable && notebookEditorFocused && !inputFocus"
+  },
+  {
+    "key": "ctrl+delete",
+    "command": "notebook.cell.clearOutputs",
+    "when": "notebookCellEditable && notebookCellHasOutputs && notebookEditable && notebookEditorFocused && !inputFocus"
+  },
+  {
+    "key": "ctrl+shift+delete",
+    "command": "notebook.clearAllCellsOutputs",
+    "when": "notebookEditable && notebookEditorFocused && !inputFocus"
   },
   // ====================================
   // 🖥 Терминал Ctrl+C и Ctrl+V

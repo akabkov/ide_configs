@@ -19,7 +19,6 @@
     "LSP-json",
     "LSP-lua",
     "LSP-ruff",
-    "LSP-terraform",
     "LSP-TexLab",
     "LSP-yaml",
     "MarkdownEditing",
@@ -31,6 +30,6 @@
     "Terminus",
     "Terraform",
     "TOML",
-    "Vue",
-  ],
+    "Vue"
+  ]
 }

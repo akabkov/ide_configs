@@ -51,8 +51,11 @@
 │   └── sublime_configs                       # Файлы настроек Sublime Text
 │       ├── comment_and_next_line.sublime-macro
 │       ├── Default (Linux).sublime-keymap
+│       ├── LSP.sublime-settings
 │       ├── Package Control.sublime-settings
 │       ├── Preferences.sublime-settings
+│       ├── prettierd_format.sublime-settings
+│       ├── Terminal.sublime-settings         # ИЗМЕНИТЬ НА ИМЯ ВАШЕГО ТЕРМИНАЛА
 │       └── Terminus.sublime-build
 │
 └── VSCode                                    # Основные настройки: keybindings и settings
@@ -175,7 +178,7 @@ cd ide_configs/SublimeText
 - Настройки пакетов: `Package Control.sublime-settings`
 - Общие настройки: `Preferences.sublime-settings`
 - Универсальный Builder через полноценный терминал: `Terminus.sublime-build` (при желании добавьте секцию для нужного языка)
-- Опциональные конфигурационные файлы (при желании использовать LSP и общесистемный форматер).
+- Конфигурационные файлы для корректной работы LSP и системного форматтера.
 
 > Доп. информация — в `SublimeText/REDME`.
 

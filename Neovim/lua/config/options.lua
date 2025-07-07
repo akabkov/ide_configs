@@ -16,8 +16,13 @@ opt.number = true         -- Показывать номера строк
 opt.relativenumber = true -- Относительная нумерация
 opt.cursorline = true     -- Подсвечивать текущую строку
 opt.colorcolumn = '100'   -- Вертикальная линия на 99 символов
-opt.signcolumn = 'yes'    -- Постоянно показывать колонку для символов (diagnostics/git)
-opt.list = true           -- Показывать спецсимволы (таб, пробел и пр.)
+opt.guicursor = table.concat({
+  "n-v-o-t:block-blinkon500-blinkoff500-blinkwait500",
+  "i-c:ver25-blinkon500-blinkoff500-blinkwait500",
+  "r:hor20-blinkon500-blinkoff500-blinkwait500"
+}, ",")                -- Вид курсора
+opt.signcolumn = 'yes' -- Постоянно показывать колонку для символов (diagnostics/git)
+opt.list = true        -- Показывать спецсимволы (таб, пробел и пр.)
 opt.listchars = {
   tab = '→ ',
   space = '·',
@@ -46,7 +51,6 @@ opt.winminwidth = 5                                              -- Минима
 opt.foldexpr = "v:lua.require'lazyvim.util'.ui.foldexpr()"
 opt.foldmethod = 'expr'
 opt.foldtext = ''
-
 
 -- ========================================
 -- 🧭 Навигация и прокрутка

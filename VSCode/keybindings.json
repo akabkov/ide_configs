@@ -52,6 +52,22 @@
   // ====================================
   {
     "key": "ctrl+a",
+    "command": "vim.remap",
+    "when": "vim.active && vim.mode == 'Normal'",
+    "args": {
+      "after": ["g", "g", "V", "G"]
+    }
+  },
+  {
+    "key": "ctrl+a",
+    "command": "vim.remap",
+    "when": "vim.active && vim.mode == 'Visual'",
+    "args": {
+      "after": ["<Esc>", "g", "g", "V", "G"]
+    }
+  },
+  {
+    "key": "ctrl+a",
     "command": "-extension.vim_ctrl+a",
     "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
   },

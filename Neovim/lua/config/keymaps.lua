@@ -55,7 +55,7 @@ keymap(modes, '<leader>W', ':w ')
 keymap(modes, '<leader>r', ':r ')
 keymap(modes, '<leader>t', '<cmd>:terminal<CR>i')
 
-keymap('n', '<leader>h', '<cmd>nohlsearch<CR>')
+keymap('n', 'H', '<cmd>nohlsearch<CR>')
 
 -- ========================================
 -- 🖱️ Быстрая прокрутка колесом

@@ -36,7 +36,7 @@ let mapleader = " "
 " =========================================
 set clipboard=unnamedplus
 set clipboard^=ideaput
-set timeoutlen=250
+set timeoutlen=200
 
 " =========================================
 " 🔍 Настройки поиска
@@ -46,7 +46,7 @@ set smartcase
 set hlsearch
 set incsearch
 
-nnoremap <Leader>h :nohlsearch<CR>
+nnoremap H :nohlsearch<CR>
 
 " =========================================
 " 🧩 Настройки расширений
@@ -83,9 +83,12 @@ inoremap jj <Esc>
 inoremap оо <Esc>
 
 " =========================================
-" 💬 Тройные кавычки для многострочной строки
+" 💬 Тройные кавычки для многострочной строки и шаблоны для SQL
 " =========================================
 inoremap '' """
+inoremap CC sql = """--sql<CR><CR>""""<Esc>"_d$ocrud(sql)<Esc>kkI
+inoremap ss --sql<CR><CR>""""<Esc>"-d$kI
+inoremap SS sql = """--sql<CR><CR>""""<Esc>"_d$oselect(sql)<Esc>kkI
 
 " =========================================
 " ⛔ Отклонить автодополнение кода и Esc в Jupyter Notebook

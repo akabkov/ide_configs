@@ -4,6 +4,7 @@ codezombiech.gitignore
 cweijan.vscode-database-client2
 esbenp.prettier-vscode
 formulahendry.code-runner
+foxundermoon.shell-format
 golang.go
 hashicorp.terraform
 inferrinizzard.prettier-sql-vscode

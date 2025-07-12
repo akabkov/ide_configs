@@ -1,0 +1,12 @@
+{
+    "uf_tab_size": 4,
+    "uf_translate_tabs_to_spaces": true,
+    "uf_case": "nochange", // "upper" or "lower" or "capitalize" or "nochange"
+    "uf_reserved_case": "upper", // "upper" or "lower" or "capitalize" or "nochange"
+    "uf_comment_syntax": "uroboroSQL", // "uroboroSQL" or "doma2"
+    "uf_escapesequence_u005c": false, // "true" for Windows
+    "uf_save_on_format": true,
+    "uf_save_on_format_extensions": [
+        ".sql"
+    ]
+}

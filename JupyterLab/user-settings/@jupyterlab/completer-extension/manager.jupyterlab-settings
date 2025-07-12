@@ -1,0 +1,11 @@
+{
+    "autoCompletion": true,
+    "availableProviders": {
+        "lsp": 1000,
+        "CompletionProvider:context": 500,
+        "CompletionProvider:kernel": 550
+    },
+    "providerTimeout": 1000,
+    "showDocumentationPanel": false,
+    "suppressIfInlineCompleterActive": true
+}

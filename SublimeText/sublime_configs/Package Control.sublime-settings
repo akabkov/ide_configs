@@ -30,6 +30,7 @@
     "Terminus",
     "Terraform",
     "TOML",
-    "Vue"
-  ]
+    "uroboroSQL Formatter",
+    "Vue",
+  ],
 }

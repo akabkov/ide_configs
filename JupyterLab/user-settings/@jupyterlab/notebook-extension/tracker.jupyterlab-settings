@@ -1,0 +1,64 @@
+{
+    "codeCellConfig": {
+        "autoClosingBrackets": true,
+        "highlightActiveLine": true,
+        "highlightTrailingWhitespace": true,
+        "highlightWhitespace": true,
+        "lineNumbers": true,
+        "customStyles": {
+            "fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+            "fontSize": 16,
+            "lineHeight": 1.5
+        },
+        "theme": "Stellars Sublime"
+    },
+    "markdownCellConfig": {
+        "autoClosingBrackets": true,
+        "highlightActiveLine": true,
+        "highlightTrailingWhitespace": true,
+        "highlightWhitespace": true,
+        "lineNumbers": true,
+        "customStyles": {
+            "fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+            "fontSize": 14,
+            "lineHeight": null
+        },
+        "theme": "Stellars Sublime"
+    },
+    "rawCellConfig": {
+        "autoClosingBrackets": true,
+        "highlightActiveLine": true,
+        "highlightTrailingWhitespace": true,
+        "highlightWhitespace": true,
+        "lineNumbers": true,
+        "customStyles": {
+            "fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+            "fontSize": 16,
+            "lineHeight": 1.5
+        },
+        "theme": "Stellars Sublime"
+    },
+    "enableKernelInitNotification": false,
+    "defaultCell": "code",
+    "autoStartDefaultKernel": false,
+    "inputHistoryScope": "global",
+    "kernelShutdown": false,
+    "scrollPastEnd": true,
+    "recordTiming": false,
+    "overscanCount": 1,
+    "maxNumberOutputs": 50,
+    "scrollHeadingToTop": true,
+    "showEditorForReadOnlyMarkdown": true,
+    "kernelStatus": {
+        "showOnStatusBar": false,
+        "showProgress": true
+    },
+    "documentWideUndoRedo": false,
+    "showHiddenCellsButton": true,
+    "renderingLayout": "default",
+    "sideBySideLeftMarginOverride": "10px",
+    "sideBySideRightMarginOverride": "10px",
+    "sideBySideOutputRatio": 1,
+    "windowingMode": "full",
+    "accessKernelHistory": false
+}

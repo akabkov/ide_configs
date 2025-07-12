@@ -1,0 +1,14 @@
+{
+    "adaptive-theme": false,
+    "overrides": {
+        "code-font-family": "JetBrainsMonoNL Nerd Font Mono",
+        "code-font-size": "16px",
+        "content-font-family": "JetBrainsMonoNL Nerd Font Mono",
+        "ui-font-family": null,
+        "ui-font-size1": "14px"
+    },
+    "preferred-dark-theme": "JupyterLab Dark",
+    "preferred-light-theme": "JupyterLab Light",
+    "theme": "Stellars Sublime",
+    "theme-scrollbars": true
+}

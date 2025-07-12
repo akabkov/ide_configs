@@ -25,7 +25,6 @@
   "trim_trailing_white_space_on_save": "all",
   "word_wrap": true,
   // Поведение при работе с файлами
-  "save_on_focus_lost": true,
   "hot_exit": false,
   "remember_open_files": false,
   "index_files": true,

@@ -1,0 +1,16 @@
+===========================================
+Установить расширения:
+===========================================
+jupyterlab-vim
+codeium.jupyter
+jupyter-ruff
+jupyterlab-git
+jupyterlab-rainbow-brackets
+jupyterlab-sql-editor
+jupyterlab-sql-explorer
+jupyterlab_stellars_sublime_theme
+
+===========================================
+Скопировать папку user-settings в директорию ~/.jupyter/lab/ с заменой.
+===========================================
+cp -rf user-settings ~/.jupyter/lab/

@@ -1,0 +1,192 @@
+{
+    "cmdModeKeys": {
+        "escToCmdMode": true,
+        "shiftEscOverrideBrowser": true
+    },
+    "enabled": true,
+    "enabledInEditors": true,
+    "extraKeybindings": [
+        {
+            "command": "jj",
+            "keys": "<Esc>",
+            "context": "insert",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "<C-[>",
+            "keys": "<Esc>a",
+            "context": "insert",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "H",
+            "keys": ":nohlsearch<CR>",
+            "context": "normal",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "''",
+            "keys": "\"\"\"",
+            "context": "insert",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "CC",
+            "mapfn": "noremap",
+            "keys": "<Esc>?%%sparksql<CR>\"_dd\"_Ssql = \"\"\"--sql<Esc>GI\"\"\"<CR>crud(sql)<Esc>kk:noh<CR>A",
+            "context": "insert",
+            "enabled": true
+        },
+        {
+            "command": "ss",
+            "keys": "%%sparksql<CR>--sql<CR>",
+            "context": "insert",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "SS",
+            "mapfn": "noremap",
+            "keys": "<Esc>?%%sparksql<CR>\"_dd\"_Ssql = \"\"\"--sql<Esc>/^\\s*$<CR>I\"\"\"<CR>select(sql)<Esc>kk:noh<CR>A",
+            "context": "insert",
+            "enabled": true
+        },
+        {
+            "command": "ff",
+            "mapfn": "noremap",
+            "keys": "<Esc>?\"\"\"<CR>\"_S%%sparksql<CR>--sql<Esc>/\"\"\"<CR>\"_dd:noh<CR>\"_S",
+            "context": "insert",
+            "enabled": true
+        },
+        {
+            "command": "ff",
+            "mapfn": "noremap",
+            "keys": "?\"\"\"<CR>\"_S%%sparksql<CR>--sql<Esc>/\"\"\"<CR>\"_dd:noh<CR>\"_S",
+            "context": "normal",
+            "enabled": true
+        },
+        {
+            "command": "<C-a>",
+            "keys": "ggVG",
+            "context": "normal",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "<C-a>",
+            "keys": "<Esc>ggVG",
+            "context": "visual",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "c",
+            "keys": "\"_c",
+            "context": "normal",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "C",
+            "keys": "\"_C",
+            "context": "normal",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "d",
+            "keys": "\"_d",
+            "context": "normal",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "dd",
+            "keys": "\"_dd",
+            "context": "normal",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "D",
+            "keys": "\"_D",
+            "context": "normal",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "s",
+            "keys": "\"_s",
+            "context": "normal",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "S",
+            "keys": "\"_S",
+            "context": "normal",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "x",
+            "keys": "\"_x",
+            "context": "normal",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "X",
+            "keys": "\"_X",
+            "context": "normal",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "c",
+            "keys": "\"_c",
+            "context": "visual",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "C",
+            "keys": "\"_C",
+            "context": "visual",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "d",
+            "keys": "\"_d",
+            "context": "visual",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "D",
+            "keys": "\"_D",
+            "context": "visual",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "s",
+            "keys": "\"_s",
+            "context": "visual",
+            "mapfn": "noremap",
+            "enabled": true
+        },
+        {
+            "command": "S",
+            "keys": "\"_S",
+            "context": "visual",
+            "mapfn": "noremap",
+            "enabled": true
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+    "fontSize": 16,
+    "lineHeight": 1.5,
+    "lineWidth": null,
+    "hideFrontMatter": true,
+    "renderTimeout": 1000
+}

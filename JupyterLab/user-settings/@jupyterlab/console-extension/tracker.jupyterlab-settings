@@ -1,0 +1,15 @@
+{
+    "promptCellConfig": {
+        "autoClosingBrackets": true,
+        "highlightActiveLine": true,
+        "highlightTrailingWhitespace": true,
+        "highlightWhitespace": true,
+        "customStyles": {
+            "fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+            "fontSize": 16,
+            "lineHeight": null
+        }
+    },
+    "interactionMode": "notebook",
+    "showAllKernelActivity": false
+}

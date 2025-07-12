@@ -46,7 +46,7 @@ set smartcase
 set hlsearch
 set incsearch
 
-nnoremap <Leader>h :nohlsearch<CR>
+nnoremap H :nohlsearch<CR>
 
 " =========================================
 " 🧩 Настройки расширений
@@ -83,9 +83,13 @@ inoremap jj <Esc>
 inoremap оо <Esc>
 
 " =========================================
-" 💬 Тройные кавычки для многострочной строки
+" 💬 Тройные кавычки для многострочной строки, маркировка и шаблоны для SQL
 " =========================================
 inoremap '' """
+inoremap ss --sql<CR>"""<Esc>0i
+inoremap SS <Home>sql = <Esc>Goselect(sql)
+nnoremap ss isql = """--sql<CR>"""<CR>select(sql)<Esc>k0i
+nnoremap SS 0isql = <Esc>Goselect(sql)<Esc>
 
 " =========================================
 " ⛔ Отклонить автодополнение кода и Esc в Jupyter Notebook

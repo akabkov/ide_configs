@@ -1,15 +1,16 @@
 # Vim-like IDE configurations for Ubuntu on Wayland
 
-Цель данного репозитория — по возможности обеспечить **одинаковое Vim-подобное поведение** в средах **Neovim**, **JetBrains IDE** и **VSCode**. Это позволяет минимизировать переключение контекста между редакторами и работать эффективно в любой среде.
+Цель данного репозитория — по возможности обеспечить **одинаковое Vim-подобное поведение** в средах **Neovim**, **JetBrains IDE**, **Visual Studio Code** и **JupyterLab**. Это позволяет минимизировать переключение контекста между редакторами и работать эффективно в любой среде.
 
 **Репозиторий включает:**
 
-- Шрифты JetBrainsMonoNL Nerd Font Mono с установочным скриптом
-- Инструкцию по переходу на Fcitx 5 как основную систему ввода (вместо `ibus`)
-- Установщик и конфигурацию для Neovim и плагинов lazy.nvim
-- Настройки и скрипт их установки для Sublime Text
-- Конфигурационные файлы для VSCode
-- Настройки IdeaVim для JetBrains IDE (`.ideavimrc`)
+- Шрифты **_JetBrainsMonoNL Nerd Font Mono_** с установочным скриптом
+- Инструкцию по переходу на **_Fcitx 5_** как основную систему ввода (вместо `ibus`)
+- Установщик и конфигурацию для **_Neovim_** и плагинов **_lazy.nvim_**
+- Настройки и скрипт их установки для **_Sublime Text_**
+- Конфигурационные файлы для **_Visual Studio Code_**
+- Настройки IdeaVim для **_JetBrains IDE_** (`.ideavimrc`)
+- Конфигурации пользовательских настроек **_JupyterLab_**
 
 ---
 
@@ -19,22 +20,49 @@
   <summary>📁 ide_configs</summary>
   <pre>
 ├── JetBrainsMono
-│   ├── install_font.sh                       # Скрипт установки шрифта в систему
-│   ├── JetBrainsMonoNLNerdFontMono-*.ttf
+│   ├── install_font.sh                         # Скрипт установки шрифта в систему
+│   ├── JetBrainsMonoNLNerdFontMono-*.ttf       # Все варианты начертаний JetBrainsMono с NerdFont
+│
+├── JupyterLab                                  # Конфигурации пользовательских настроек JupyterLab
+│   ├── README
+│   └── user-settings
+│       ├── @axlair
+│       │   └── jupyterlab_vim
+│       │       └── plugin.jupyterlab-settings  # Настройки расширения vim-мода
+│       ├── codeium-jupyter
+│       │   └── inline-provider.jupyterlab-settings
+│       ├── @jupyterlab
+│       │   ├── apputils-extension/notification.jupyterlab-settings
+│       │   ├── apputils-extension/themes.jupyterlab-settings
+│       │   ├── codemirror-extension/plugin.jupyterlab-settings
+│       │   ├── completer-extension/...
+│       │   ├── console-extension/tracker.jupyterlab-settings
+│       │   ├── docmanager-extension/plugin.jupyterlab-settings
+│       │   ├── extensionmanager-extension/plugin.jupyterlab-settings
+│       │   ├── filebrowser-extension/browser.jupyterlab-settings
+│       │   ├── fileeditor-extension/plugin.jupyterlab-settings
+│       │   ├── markdownviewer-extension/plugin.jupyterlab-settings
+│       │   ├── notebook-extension/tracker.jupyterlab-settings
+│       │   ├── shortcuts-extension/shortcuts.jupyterlab-settings
+│       │   └── terminal-extension/plugin.jupyterlab-settings
+│       ├── jupyterlab-sql-editor/plugin.jupyterlab-settings
+│       ├── @jupyter-lsp/jupyterlab-lsp/completion.jupyterlab-settings
+│       ├── jupyter-ruff/plugin.jupyterlab-settings
+│       └── @jupyter-widgets/jupyterlab-manager/plugin.jupyterlab-settings
 │
 ├── Neovim
-│   ├── init.lua                              # Основной конфиг Neovim с пояснениями по установке
-│   ├── install_lazy.nvim_plugins.sh          # Скрипт установки плагинов lazy.nvim
+│   ├── init.lua                                # Основной конфиг Neovim с пояснениями по установке
+│   ├── install_lazy.nvim_plugins.sh            # Скрипт установки плагинов lazy.nvim
 │   ├── installer
-│   │   ├── install_nvim.sh                   # Скрипт установки последней версии Neovim
+│   │   ├── install_nvim.sh                     # Скрипт установки последней версии Neovim
 │   │   ├── README
-│   │   └── remove_nvim.sh                    # Удаление установленного Neovim (без очистки конфигурации)
+│   │   └── remove_nvim.sh                      # Удаление установленного Neovim (без очистки конфигурации)
 │   └── lua
-│       ├── config                            # Основные настройки: keymaps, options, загрузка lazy.nvim
+│       ├── config                              # Основные настройки: keymaps, options, загрузка lazy.nvim
 │       │   ├── keymaps.lua
 │       │   ├── lazy.lua
 │       │   └── options.lua
-│       └── plugins                           # Конфигурации отдельных плагинов Neovim
+│       └── plugins                             # Конфигурации отдельных плагинов Neovim
 │           ├── langmapper.lua
 │           ├── leap.lua
 │           ├── lualine.lua
@@ -45,21 +73,21 @@
 ├── README.md
 │
 ├── SublimeText
-│   ├── install_sublime_configs.sh            # Скрипт установки всех настроек Sublime Text
-│   ├── kill_codeium_many_instances.sh        # Утилита для принудительного завершения зависших процессов Codeium
+│   ├── install_sublime_configs.sh              # Скрипт установки всех настроек Sublime Text
+│   ├── kill_codeium_many_instances.sh          # Утилита для завершения зависших процессов Codeium
 │   ├── README
-│   └── sublime_configs                       # Файлы настроек Sublime Text
+│   └── sublime_configs                         # Файлы настроек Sublime Text
 │       ├── comment_and_next_line.sublime-macro
 │       ├── Default (Linux).sublime-keymap
 │       ├── LSP.sublime-settings
 │       ├── Package Control.sublime-settings
 │       ├── Preferences.sublime-settings
 │       ├── prettierd_format.sublime-settings
-│       ├── Terminal.sublime-settings         # ИЗМЕНИТЬ НА ИМЯ ВАШЕГО ТЕРМИНАЛА
+│       ├── Terminal.sublime-settings           # ИЗМЕНИТЬ НА ИМЯ ВАШЕГО ТЕРМИНАЛА
 │       └── Terminus.sublime-build
 │
-└── VSCode                                    # Основные настройки: keybindings и settings
-    ├── extensions-list.txt
+└── VSCode                                      # Основные настройки: keybindings и settings
+    ├── extensions_list.txt
     ├── keybindings.json
     ├── README
     └── settings.json
@@ -186,7 +214,7 @@ cd ide_configs/SublimeText
 
 ---
 
-### 5. Настройка VSCode
+### 5. Настройка Visual Studio Code
 
 Скопируйте или настройте через интерфейс:
 
@@ -208,6 +236,11 @@ cd ide_configs/SublimeText
 > В настройках IDE выставить межстрочное расстояние **1.05** для редактора и **1.0** для терминала. Это создасть **единсво отступов** во всех средах.
 
 ---
+
+### 7. Конфигурация JupyterLab
+
+- Скопируйте содержимое папки `user-settings` в директорию `~/.jupyter/lab/user-settings` с заменой.
+- Установите расширения из списка в `JupyterLab/README`.
 
 ## Рекомендации
 

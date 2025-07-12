@@ -161,19 +161,11 @@
   "vim.smartcase": true,
   "vim.timeout": 250,
   "vim.useSystemClipboard": true,
-  // Быстрый выход из режима вставки, маркировка SQL, Esc в Insert mode
+  // Быстрый выход из режима вставки, Esc в Insert mode
   "vim.insertModeKeyBindingsNonRecursive": [
     {
       "before": ["j", "j"],
       "after": ["<Esc>"]
-    },
-    {
-      "before": ["'", "'"],
-      "after": ["\"", "\"", "\""]
-    },
-    {
-      "before": ["s", "s"],
-      "after": ["-", "-", "s", "q", "l"]
     },
     {
       "before": ["<C-[>"],
@@ -187,13 +179,59 @@
     {
       "before": ["<C-х>"],
       "after": ["<Esc>", "a"]
+    },
+    {
+      "before": ["'", "'"],
+      "after": ["\"", "\"", "\""]
+    },
+    // Маркировка SQL
+    {
+      "before": ["s", "s"],
+      "after": ["-", "-", "s", "q", "l", "\n"]
+    },
+    {
+      "before": ["S", "S"],
+      "after": [
+        "<Esc>",
+        "g",
+        "g",
+        "0",
+        "i",
+        "s",
+        "q",
+        "l",
+        " ",
+        "=",
+        " ",
+        "<Esc>",
+        "G",
+        "o",
+        "<Esc>",
+        "0",
+        "i",
+        "s",
+        "e",
+        "l",
+        "e",
+        "c",
+        "t",
+        "(",
+        "s",
+        "q",
+        "l",
+        ")"
+      ]
     }
   ],
-  // Комбинации с лидер-клавишей
-  "vim.visualModeKeyBindings": [
+  // Форматирование SQL строк
+  "vim.insertModeKeyBindings": [
     {
-      "before": ["<leader>", "f"],
+      "before": ["f", "f"],
       "commands": [
+        {
+          "command": "selectby.regex",
+          "args": ["insideTripleQuotes"]
+        },
         "prettier-sql-vscode.format-selection",
         "extension.vim_escape"
       ]
@@ -201,16 +239,19 @@
   ],
   "vim.normalModeKeyBindings": [
     {
-      "before": ["<leader>", "f"],
+      "before": ["f", "f"],
       "commands": [
         {
           "command": "selectby.regex",
           "args": ["insideTripleQuotes"]
-        }
+        },
+        "prettier-sql-vscode.format-selection",
+        "extension.vim_escape"
       ]
     },
+    // Разное
     {
-      "before": ["<leader>", "h"],
+      "before": ["H"],
       "commands": [":nohlsearch"]
     },
     {
@@ -256,9 +297,81 @@
       "before": ["X"],
       "after": ["\"", "_", "X"]
     },
+    // "Bug fix" Ctrl+A
     {
       "before": ["A"],
       "after": ["g", "g", "V", "G"]
+    },
+    // Шаблоны для SQL
+    {
+      "before": ["s", "s"],
+      "after": [
+        "i",
+        "s",
+        "q",
+        "l",
+        " ",
+        "=",
+        " ",
+        "\"",
+        "\"",
+        "\"",
+        "-",
+        "-",
+        "s",
+        "q",
+        "l",
+        "<CR>",
+        "<Esc>",
+        "o",
+        "s",
+        "e",
+        "l",
+        "e",
+        "c",
+        "t",
+        "(",
+        "s",
+        "q",
+        "l",
+        ")",
+        "<Esc>",
+        "k",
+        "0",
+        "i"
+      ]
+    },
+    {
+      "before": ["S", "S"],
+      "after": [
+        "g",
+        "g",
+        "i",
+        "s",
+        "q",
+        "l",
+        " ",
+        "=",
+        " ",
+        "<Esc>",
+        "G",
+        "o",
+        "<Esc>",
+        "0",
+        "i",
+        "s",
+        "e",
+        "l",
+        "e",
+        "c",
+        "t",
+        "(",
+        "s",
+        "q",
+        "l",
+        ")",
+        "<Esc>"
+      ]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [

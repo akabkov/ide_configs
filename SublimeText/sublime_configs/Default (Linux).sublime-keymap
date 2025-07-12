@@ -52,5 +52,31 @@
     "args": {
       "file": "Packages/User/comment_and_next_line.sublime-macro"
     }
+  },
+  // Codeium
+  {
+    "keys": [
+      "ctrl+["
+    ], // escape
+    "command": "codeium_reject_completion",
+    "context": [
+      {
+        "key": "setting.Codeium.completion_active",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
+  },
+  {
+    "keys": [
+      "ctrl+shift+w"
+    ],
+    "command": "codeium_disable_plugin"
+  },
+  {
+    "keys": [
+      "alt+shift+w"
+    ],
+    "command": "codeium_enable_plugin"
   }
 ]

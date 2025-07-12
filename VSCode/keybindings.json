@@ -16,6 +16,14 @@
     "command": "extension.commentAndNextLine",
     "when": "editorTextFocus && !editorReadonly"
   },
+  {
+    "key": "ctrl+shift+w",
+    "command": "-workbench.action.closeWindow"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor"
+  },
   // ====================================
   // 📂 Интерфейс: боковая панель и вспомогательная панель
   // ====================================
@@ -40,16 +48,32 @@
     "when": "inlineSuggestionVisible"
   },
   {
-    "key": "alt+w",
+    "key": "alt+shift+w",
     "command": "codeium.cancelSnooze"
   },
   {
-    "key": "ctrl+w",
+    "key": "ctrl+shift+w",
     "command": "codeium.snoozeAutocomplete"
   },
   // ====================================
   // ✅ Отключение Vim-мэппингов
   // ====================================
+  {
+    "key": "ctrl+a",
+    "command": "vim.remap",
+    "when": "vim.active && vim.mode == 'Normal'",
+    "args": {
+      "after": ["g", "g", "V", "G"]
+    }
+  },
+  {
+    "key": "ctrl+a",
+    "command": "vim.remap",
+    "when": "vim.active && vim.mode == 'Visual'",
+    "args": {
+      "after": ["<Esc>", "g", "g", "V", "G"]
+    }
+  },
   {
     "key": "ctrl+a",
     "command": "-extension.vim_ctrl+a",

@@ -1,0 +1,16 @@
+{
+    "editorConfig": {
+        "autoClosingBrackets": true,
+        "highlightActiveLine": true,
+        "highlightTrailingWhitespace": true,
+        "highlightWhitespace": true,
+        "customStyles": {
+            "fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+            "fontSize": 16,
+            "lineHeight": 1.5
+        },
+        "theme": "Stellars Sublime"
+    },
+    "scrollPastEnd": true,
+    "toolbar": []
+}

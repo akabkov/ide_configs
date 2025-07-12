@@ -1,0 +1,9 @@
+{
+    "formatTabWidth": 4,
+    "formatUseTabs": false,
+    "sparksqlStartMarker": "--start-sparksql",
+    "sparksqlEndMarker": "--end-sparksql",
+    "trinoStartMarker": "--start-trino",
+    "trinoEndMarker": "--end-trino",
+    "formatKeywordCase": "upper"
+}

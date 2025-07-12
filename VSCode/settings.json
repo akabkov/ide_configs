@@ -13,6 +13,7 @@
   "editor.rulers": [99],
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 99,
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
   "workbench.colorTheme": "Mariana",
   "workbench.iconTheme": "material-icon-theme",
   // Комментирование с переходом на следующую строку
@@ -20,8 +21,17 @@
     {
       "command": "extension.commentAndNextLine",
       "sequence": ["editor.action.commentLine", "cursorDown"]
+    },
+    {
+      "command": "multiCommand.ruffFixAll",
+      "sequence": [
+        "ruff.executeOrganizeImports",
+        "ruff.executeAutofix",
+        "ruff.executeFormat"
+      ]
     }
   ],
+  "terminal.integrated.copyOnSelection": true,
   // =====================================
   // 🧩 Расширения и Codeium
   // =====================================
@@ -75,11 +85,10 @@
   "editor.lineHeight": 1.5,
   "markdown.preview.fontSize": 16,
   "markdown.preview.lineHeight": 1.5,
-  "notebook.markdown.lineHeight": 1.5,
   "notebook.markup.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "notebook.markup.fontSize": 14,
   "notebook.output.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "notebook.output.fontSize": 14,
-  "notebook.output.lineHeight": 1.5,
   "scm.inputFontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "scm.inputFontSize": 14,
   "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
@@ -88,9 +97,16 @@
   // =====================================
   // ⚙️ Форматтеры по языкам
   // =====================================
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.prettierPath": "/usr/lib/node_modules/prettier/",
   "prettier.resolveGlobalModules": true,
+  "Prettier-SQL.keywordCase": "upper",
+  "Prettier-SQL.SQLFlavourOverride": "spark",
+  "shellformat.path": "/home/aleksey/go/bin/shfmt",
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
@@ -102,6 +118,9 @@
   },
   "[sql]": {
     "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar"
@@ -126,7 +145,14 @@
   // =====================================
   "notebook.formatOnCellExecution": true,
   "notebook.formatOnSave.enabled": true,
+  "notebook.defaultFormatter": "charliermarsh.ruff",
+  "notebook.codeActionsOnSave": {
+    "notebook.source.fixAll": "explicit",
+    "notebook.source.organizeImports": "explicit"
+  },
   "notebook.lineNumbers": "on",
+  "notebook.output.scrolling": true,
+  "notebook.output.wordWrap": true,
   // =====================================
   // 📝 Выделение SQL внутри 3-х кавычек для быстрого форматирования по двойному нажатию <leader>+f
   // =====================================
@@ -159,21 +185,13 @@
   "vim.leader": "<space>",
   "vim.smartRelativeLine": true,
   "vim.smartcase": true,
-  "vim.timeout": 250,
+  "vim.timeout": 200,
   "vim.useSystemClipboard": true,
-  // Быстрый выход из режима вставки, маркировка SQL, Esc в Insert mode
+  // Быстрый выход из режима вставки, Esc в Insert mode
   "vim.insertModeKeyBindingsNonRecursive": [
     {
       "before": ["j", "j"],
       "after": ["<Esc>"]
-    },
-    {
-      "before": ["'", "'"],
-      "after": ["\"", "\"", "\""]
-    },
-    {
-      "before": ["s", "s"],
-      "after": ["-", "-", "s", "q", "l"]
     },
     {
       "before": ["<C-[>"],
@@ -187,34 +205,146 @@
     {
       "before": ["<C-х>"],
       "after": ["<Esc>", "a"]
-    }
-  ],
-  // Комбинации с лидер-клавишей
-  "vim.visualModeKeyBindings": [
+    },
     {
-      "before": ["<leader>", "f"],
-      "commands": [
-        "prettier-sql-vscode.format-selection",
-        "extension.vim_escape"
+      "before": ["'", "'"],
+      "after": ["\"", "\"", "\""]
+    },
+    // Шаблоны для SQL
+    {
+      "before": ["C", "C"],
+      "after": [
+        "s",
+        "q",
+        "l",
+        " ",
+        "=",
+        " ",
+        "\"",
+        "\"",
+        "\"",
+        "-",
+        "-",
+        "s",
+        "q",
+        "l",
+        "<CR>",
+        "<CR>",
+        "<Esc>",
+        "o",
+        "c",
+        "r",
+        "u",
+        "d",
+        "(",
+        "s",
+        "q",
+        "l",
+        ")",
+        "<Esc>",
+        "k",
+        "k",
+        "I"
+      ]
+    },
+    {
+      "before": ["s", "s"],
+      "after": ["-", "-", "s", "q", "l", "<CR>", "<CR>", "<Esc>", "k", "I"]
+    },
+    {
+      "before": ["S", "S"],
+      "after": [
+        "s",
+        "q",
+        "l",
+        " ",
+        "=",
+        " ",
+        "\"",
+        "\"",
+        "\"",
+        "-",
+        "-",
+        "s",
+        "q",
+        "l",
+        "<CR>",
+        "<CR>",
+        "<Esc>",
+        "o",
+        "s",
+        "e",
+        "l",
+        "e",
+        "c",
+        "t",
+        "(",
+        "s",
+        "q",
+        "l",
+        ")",
+        "<Esc>",
+        "k",
+        "k",
+        "I"
       ]
     }
   ],
-  "vim.normalModeKeyBindings": [
+  // Форматирование SQL строк и Jupyter Notebook
+  "vim.insertModeKeyBindings": [
     {
-      "before": ["<leader>", "f"],
+      "before": ["f", "f"],
       "commands": [
         {
           "command": "selectby.regex",
           "args": ["insideTripleQuotes"]
-        }
+        },
+        "prettier-sql-vscode.format-selection",
+        {
+          "command": "editor.action.insertSnippet",
+          "args": {
+            "snippet": "$TM_SELECTED_TEXT\n"
+          }
+        },
+        "extension.vim_escape",
+        "extension.vim_insert",
+        "extension.vim_right"
       ]
     },
     {
-      "before": ["<leader>", "h"],
+      "before": ["r", "r"],
+      "commands": ["multiCommand.ruffFixAll"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["f", "f"],
+      "commands": [
+        {
+          "command": "selectby.regex",
+          "args": ["insideTripleQuotes"]
+        },
+        "prettier-sql-vscode.format-selection",
+        {
+          "command": "editor.action.insertSnippet",
+          "args": {
+            "snippet": "$TM_SELECTED_TEXT\n"
+          }
+        },
+        "extension.vim_escape"
+      ]
+    },
+    {
+      "before": ["r", "r"],
+      "commands": ["multiCommand.ruffFixAll"]
+    },
+    // Разное
+    {
+      "before": ["H"],
       "commands": [":nohlsearch"]
     },
     {
-      "before": ["<leader>", "s"],
+      "before": ["<leader>", "f"],
       "commands": ["extension.aceJump.multiChar"]
     },
     {
@@ -255,10 +385,6 @@
     {
       "before": ["X"],
       "after": ["\"", "_", "X"]
-    },
-    {
-      "before": ["A"],
-      "after": ["g", "g", "V", "G"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -285,10 +411,6 @@
     {
       "before": ["S"],
       "after": ["\"", "_", "S"]
-    },
-    {
-      "before": ["A"],
-      "after": ["<Esc>", "g", "g", "V", "G"]
     }
   ]
 }

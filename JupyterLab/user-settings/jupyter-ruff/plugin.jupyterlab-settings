@@ -1,0 +1,5 @@
+{
+    "format-on-run": true,
+    "format-on-save": false,
+    "sort-imports": true
+}

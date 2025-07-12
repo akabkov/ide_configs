@@ -49,13 +49,12 @@ keymap('i', '<S-Down>', '<C-O>v<Down>')
 
 -- Команды сохранения, выхода и терминала
 keymap(modes, '<leader>q', '<cmd>q!<CR>')
-keymap(modes, '<leader>Q', '<cmd>wq<CR>')
-keymap(modes, '<leader>w', '<cmd>w<CR>')
-keymap(modes, '<leader>W', ':w ')
+keymap(modes, '<leader>w', '<cmd>wq<CR>')
+keymap(modes, '<leader>s', '<cmd>w<CR>')
 keymap(modes, '<leader>r', ':r ')
 keymap(modes, '<leader>t', '<cmd>:terminal<CR>i')
 
-keymap('n', '<leader>h', '<cmd>nohlsearch<CR>')
+keymap('n', 'H', '<cmd>nohlsearch<CR>')
 
 -- ========================================
 -- 🖱️ Быстрая прокрутка колесом
